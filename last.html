@@ -1,0 +1,634 @@
+/invoice/list: List all invoices linked to your account.
+ 
+        
+         
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+          
+          <tr>
+            <td>invoices[]</td>
+            <td>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>items</td>
+                <td colspan=2>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>line_item</td>
+                <td>Unique ID of this line item.</td>
+                <td>Integer: 1344</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>entry_ts</td>
+                <td>Unix timestamp of the time this line item was created.</td>
+                <td>Integer: 1375471700</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>description</td>
+                <td>Description of this specific line item.</td>
+                <td>String: Renewal, Paypal Payment, Service credit, Bitcoin payment, or other description.</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>btc_price</td>
+                <td>A representation of the price that was exchanged in this invoice, in Bitcoins (BTC)</td>
+                <td>Float: -0.013937066402378594</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>price</td>
+                <td>A representation of the price that was exchanged in this invoice, in USD.</td>
+                <td>Float: -6.75</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>invoice</td>
+                <td>Unique ID of the invoice that holds this line item.</td>
+                <td>Integer: 928</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>payment_ts</td>
+                <td>Unix timestamp representing the time the invoice was paid; null if the invoice is unpaid.</td>
+                <td>Integer: 1375213382; None</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>user</td>
+                <td>Username of the user who the invoice applies to - probably you.</td>
+                <td>String: nasonfish</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>invoice</td>
+                <td>Unique ID of the invoice you are viewing.</td>
+                <td>Integer: 928</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>creation_ts</td>
+                <td>Unix timestamp representing the time the invoice was created.</td>
+                <td>Integer: 1375200553</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>total</td>
+                <td>Number representing the total value of the invoice (0 if the invoice is paid).</td>
+                <td>Float: 6.75</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+          </tr>
+          
+        </table>
+        
+/vps/list: List all vServers linked to your account.
+ 
+        
+         
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+          
+          <tr>
+            <td>vpslist[]</td>
+            <td>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>profile</td>
+                <td colspan=2>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>name</td>
+                <td>A name representing your boot profile</td>
+                <td>String: PV-GRUB (64-bit)</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>id</td>
+                <td>A unique ID assigned to your current boot profile.</td>
+                <td>Integer: 1</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>ipv6_limit</td>
+                <td>The maximum amount of IPv6 addresses that can be assigned to your vServer.</td>
+                <td>Integer: 1, 32</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>swap</td>
+                <td>The amount of SWAP this server has allocated.</td>
+                <td>Integer: 256</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>node</td>
+                <td>The name of the current node your vServer exists on.</td>
+                <td>String: dal2</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>name</td>
+                <td>The internal name for your server, usually named as <your username>-<incrementing id>.</td>
+                <td>String, nasonfish-1</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>ipv4_limit</td>
+                <td>The maximum amount of IPv4 addresses that can be assigned to your vServer.</td>
+                <td>Integer: 1</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>wss_console_uri</td>
+                <td>The WSS console URI assigned to this vServer</td>
+                <td>URI: wss://console-dal2.tortois.es:9393/console/nasonfish-1/<hexidecimal_key></td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>cpu_sla</td>
+                <td>Your server's priority on claiming resources - this can be bulk if you are a high memory user.</td>
+                <td>String: standard, bulk</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>mac</td>
+                <td>The MAC hardware address for your vServer</td>
+                <td>String: 00:16:3e:8c:fa:f2</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>wss_metrics_uri</td>
+                <td>The WSS metrics URI assigned to this vServer</td>
+                <td>URI: wss://console-dal2.tortois.es:9393/stats/nasonfish-1/<hexidecimal_key></td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>user</td>
+                <td>The username of the user this vServer is assigned to. Probably you.</td>
+                <td>String: nasonfish</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>memory</td>
+                <td>The amount of RAM that has been allocated to your vServer, in megabytes.</td>
+                <td>Integer: 256</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>monitoring</td>
+                <td>If Watchdog monitoring is enabled (meaning your server will be restarted automatically)</td>
+                <td>Boolean: true, false</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>disk</td>
+                <td>The amount of space allocated to your vServer, in gigabytes.</td>
+                <td>Integer: 15</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>nickname</td>
+                <td>The custom nickname assigned to your vServer.</td>
+                <td>String: personal_vps</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>id</td>
+                <td>A unique identifier for this vServer.</td>
+                <td>Integer: 2830</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>ips[]</td>
+                <td colspan=2>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>ip</td>
+                <td>The full IP address assigned to your server.</td>
+                <td>String: 198.52.199.3</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>id</td>
+                <td>The unique ID assigned to this specific IP address.</td>
+                <td>Integer: 4006</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>ipnet</td>
+                <td colspan=2>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>broadcast</td>
+                <td>The broadcast address for this IP address</td>
+                <td>String: 198.52.199.255</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>netmask</td>
+                <td>The netmask for this IP address</td>
+                <td>String: 255.255.255.0</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>version</td>
+                <td>The Internet Protocol Version this IP address resembles</td>
+                <td>Integer: 4, 6</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>gateway</td>
+                <td>The gateway address for this IP address</td>
+                <td>String: 198.52.199.1</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>network</td>
+                <td>The IP address network this address resembles</td>
+                <td>String: 198.52.199.0/24</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+            </tr>
+            
+        
+        </table>
+        </td>
+            </tr>
+            
+        
+        </table>
+        </td>
+          </tr>
+          
+        </table>
+        
+/invoice/service_credit.json: Display service credit associated with your account.
+ 
+        
+         
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+          
+          <tr>
+            <td>username</td>
+            <td>Your username.</td>
+          </tr>
+          
+          <tr>
+            <td>total</td>
+            <td>Your total service credit.</td>
+          </tr>
+          
+        </table>
+        
+/invoice/{invoice_id}: View information on a single Invoice.
+ 
+        
+            <table>
+            
+              <tr>
+                <th>invoice_id</th>
+                
+                    <th>The ID of the invoice you intend to view.</th>
+                
+              </tr>
+            
+            </table>
+        
+         
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+          
+          <tr>
+            <td>invoice</td>
+            <td>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>items</td>
+                <td colspan=2>
+        <style>
+        .tb:nth-child(even){ background-color: #ccc; }
+        .tb:nth-child(odd){ background-color: #fff; }
+        </style>
+        <table>
+        <tr>
+        <th style="width: 15%;">Key</th>
+        <th style="width: 55%;">Description</th>
+        <th style="width: 30%;">Example</th>
+        </tr>
+        
+            
+            <tr class="tb">
+                <td>line_item</td>
+                <td>Unique ID of this line item.</td>
+                <td>Integer: 1344</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>entry_ts</td>
+                <td>Unix timestamp of the time this line item was created.</td>
+                <td>Integer: 1375471700</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>description</td>
+                <td>Description of this specific line item.</td>
+                <td>String: Renewal, Paypal Payment, Service credit, Bitcoin payment, or other description.</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>btc_price</td>
+                <td>A representation of the price that was exchanged in this invoice, in Bitcoins (BTC)</td>
+                <td>Float: -0.013937066402378594</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>price</td>
+                <td>A representation of the price that was exchanged in this invoice, in USD.</td>
+                <td>Float: -6.75</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>invoice</td>
+                <td>Unique ID of the invoice that holds this line item.</td>
+                <td>Integer: 928</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>payment_ts</td>
+                <td>Unix timestamp representing the time the invoice was paid; null if the invoice is unpaid.</td>
+                <td>Integer: 1375213382; None</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>user</td>
+                <td>Username of the user who the invoice applies to - probably you.</td>
+                <td>String: nasonfish</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>invoice</td>
+                <td>Unique ID of the invoice you are viewing.</td>
+                <td>Integer: 928</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>creation_ts</td>
+                <td>Unix timestamp representing the time the invoice was created.</td>
+                <td>Integer: 1375200553</td>
+            </tr>
+            
+        
+            
+            <tr class="tb">
+                <td>total</td>
+                <td>Number representing the total value of the invoice (0 if the invoice is paid).</td>
+                <td>Float: 6.75</td>
+            </tr>
+            
+        
+        </table>
+        </td>
+          </tr>
+          
+        </table>
+        
+/invoice/{invoice_id}.pdf: View your invoice as a printable PDF file
+ 
+        
+            <table>
+            
+              <tr>
+                <th>invoice_id</th>
+                
+                    <th>The ID of the invoice you intend to view.</th>
+                
+              </tr>
+            
+            </table>
+        
+         
+/invoice/{invoice_id}/resend: Send an invoice e-mail to your e-mail address on file.
+ 
+        
+            <table>
+            
+              <tr>
+                <th>invoice_id</th>
+                
+                    <th>The ID of the invoice you intend to view.</th>
+                
+              </tr>
+            
+            </table>
+        
+         
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+          
+          <tr>
+            <td>redirect</td>
+            <td>/vps/list</td>
+          </tr>
+          
+        </table>
+        
